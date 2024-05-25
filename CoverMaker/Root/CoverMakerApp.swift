@@ -14,7 +14,10 @@ struct CoverMakerApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .frame(width: 550, height: 550)
         }
         .environmentObject(store)
+        .defaultPosition(.center)
+        .windowResizability(.contentSize)
     }
 }

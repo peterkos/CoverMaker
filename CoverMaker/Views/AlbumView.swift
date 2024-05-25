@@ -42,12 +42,15 @@ struct AlbumView: View {
     }
 
     private var titleSize: CGFloat {
-        albumSize / 4
+        albumSize / 3
     }
 
     private var avenirCapHeight: CGFloat {
-        (NSFont(name: "Avenir", size: titleSize) ?? .systemFont(ofSize: 80))
-            .capHeight
+        if let font = NSFont(name: "Avenir", size: titleSize) {
+            font.capHeight
+        } else {
+            0.0
+        }
     }
 
     init(size: AlbumSize) {
@@ -55,8 +58,7 @@ struct AlbumView: View {
     }
 
     var body: some View {
-        VStack(spacing: albumSize / 5.0) {
-            Spacer()
+        VStack(spacing: albumSize / 10.0) {
             Image(systemName: iconName)
                 .resizable()
                 .bold()
@@ -69,7 +71,7 @@ struct AlbumView: View {
                 .font(.custom("Avenir", size: titleSize))
                 .bold()
                 .frame(height: avenirCapHeight)
-            Spacer()
+                .minimumScaleFactor(0.5)
         }
         .frame(
             width: albumSize,
@@ -85,7 +87,7 @@ struct AlbumView: View {
 
 #Preview {
     AlbumCollection(
-        title: .constant("Test"),
+        title: .constant("Tesfsfsfst"),
         iconName: .constant("arrow.right.circle"),
         bgColor: .constant(.blue)
     )
