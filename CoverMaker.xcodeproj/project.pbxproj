@@ -11,6 +11,13 @@
 		D724698A2C019666003E522E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469892C019666003E522E /* ContentView.swift */; };
 		D724698C2C019667003E522E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D724698B2C019667003E522E /* Assets.xcassets */; };
 		D724698F2C019667003E522E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D724698E2C019667003E522E /* Preview Assets.xcassets */; };
+		D72469A42C0196E5003E522E /* CoverMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469962C0196E5003E522E /* CoverMakerApp.swift */; };
+		D72469A52C0196E5003E522E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469972C0196E5003E522E /* RootView.swift */; };
+		D72469A62C0196E5003E522E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469992C0196E5003E522E /* Service.swift */; };
+		D72469A72C0196E5003E522E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724699B2C0196E5003E522E /* Store.swift */; };
+		D72469A82C0196E5003E522E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724699E2C0196E5003E522E /* Collection+Extensions.swift */; };
+		D72469A92C0196E5003E522E /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724699F2C0196E5003E522E /* EnvironmentValues+Extensions.swift */; };
+		D72469AA2C0196E5003E522E /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469A22C0196E5003E522E /* InitialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		D724698B2C019667003E522E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D724698E2C019667003E522E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D72469902C019667003E522E /* CoverMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoverMaker.entitlements; sourceTree = "<group>"; };
+		D72469962C0196E5003E522E /* CoverMakerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverMakerApp.swift; sourceTree = "<group>"; };
+		D72469972C0196E5003E522E /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D72469992C0196E5003E522E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D724699B2C0196E5003E522E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D724699E2C0196E5003E522E /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		D724699F2C0196E5003E522E /* EnvironmentValues+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extensions.swift"; sourceTree = "<group>"; };
+		D72469A22C0196E5003E522E /* InitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,10 @@
 		D72469862C019666003E522E /* CoverMaker */ = {
 			isa = PBXGroup;
 			children = (
+				D724699D2C0196E5003E522E /* Domain */,
+				D72469982C0196E5003E522E /* Root */,
+				D72469A12C0196E5003E522E /* Utilities */,
+				D72469A32C0196E5003E522E /* Views */,
 				D72469872C019666003E522E /* CoverMakerApp.swift */,
 				D72469892C019666003E522E /* ContentView.swift */,
 				D724698B2C019667003E522E /* Assets.xcassets */,
@@ -67,6 +85,65 @@
 				D724698E2C019667003E522E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D72469982C0196E5003E522E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D72469962C0196E5003E522E /* CoverMakerApp.swift */,
+				D72469972C0196E5003E522E /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		D724699A2C0196E5003E522E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D72469992C0196E5003E522E /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D724699C2C0196E5003E522E /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D724699B2C0196E5003E522E /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D724699D2C0196E5003E522E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D724699A2C0196E5003E522E /* Service */,
+				D724699C2C0196E5003E522E /* Store */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D72469A02C0196E5003E522E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D724699E2C0196E5003E522E /* Collection+Extensions.swift */,
+				D724699F2C0196E5003E522E /* EnvironmentValues+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D72469A12C0196E5003E522E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D72469A02C0196E5003E522E /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D72469A32C0196E5003E522E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D72469A22C0196E5003E522E /* InitialView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +216,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72469A52C0196E5003E522E /* RootView.swift in Sources */,
+				D72469A92C0196E5003E522E /* EnvironmentValues+Extensions.swift in Sources */,
 				D724698A2C019666003E522E /* ContentView.swift in Sources */,
+				D72469A82C0196E5003E522E /* Collection+Extensions.swift in Sources */,
+				D72469A62C0196E5003E522E /* Service.swift in Sources */,
+				D72469A72C0196E5003E522E /* Store.swift in Sources */,
+				D72469AA2C0196E5003E522E /* InitialView.swift in Sources */,
+				D72469A42C0196E5003E522E /* CoverMakerApp.swift in Sources */,
 				D72469882C019666003E522E /* CoverMakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
