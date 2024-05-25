@@ -25,12 +25,12 @@ struct AlbumCollection: View {
 }
 
 struct AlbumView: View {
-
     enum AlbumSize: CGFloat {
         case small = 50
         case medium = 100
         case large = 300
     }
+
     @Environment(\.title) var title: String
     @Environment(\.iconName) var iconName: String
     @Environment(\.bgColor) var bgColor: Color
@@ -51,11 +51,10 @@ struct AlbumView: View {
     }
 
     init(size: AlbumSize) {
-        self.albumSize = size.rawValue
+        albumSize = size.rawValue
     }
 
     var body: some View {
-
         VStack(spacing: albumSize / 5.0) {
             Spacer()
             Image(systemName: iconName)
@@ -65,26 +64,24 @@ struct AlbumView: View {
                     width: contentSize,
                     height: contentSize
                 )
-                .aspectRatio(1/1, contentMode: .fit)
+                .aspectRatio(1 / 1, contentMode: .fit)
             Text(title)
                 .font(.custom("Avenir", size: titleSize))
                 .bold()
                 .frame(height: avenirCapHeight)
             Spacer()
-
         }
         .frame(
             width: albumSize,
             height: albumSize
         )
-        .aspectRatio(1/1, contentMode: .fill)
+        .aspectRatio(1 / 1, contentMode: .fill)
         .background(
             RoundedRectangle(cornerRadius: 4.0)
                 .fill(bgColor)
         )
     }
 }
-
 
 #Preview {
     AlbumCollection(

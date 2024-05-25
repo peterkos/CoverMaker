@@ -14,7 +14,5 @@ class Store: ObservableObject {
         self.service = service
     }
 
-    func save() {
-        
-    }
+    func save() {}
 }
