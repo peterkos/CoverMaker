@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D72469882C019666003E522E /* CoverMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469872C019666003E522E /* CoverMakerApp.swift */; };
-		D724698A2C019666003E522E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469892C019666003E522E /* ContentView.swift */; };
 		D724698C2C019667003E522E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D724698B2C019667003E522E /* Assets.xcassets */; };
 		D724698F2C019667003E522E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D724698E2C019667003E522E /* Preview Assets.xcassets */; };
 		D72469A42C0196E5003E522E /* CoverMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469962C0196E5003E522E /* CoverMakerApp.swift */; };
@@ -18,12 +16,11 @@
 		D72469A82C0196E5003E522E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724699E2C0196E5003E522E /* Collection+Extensions.swift */; };
 		D72469A92C0196E5003E522E /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724699F2C0196E5003E522E /* EnvironmentValues+Extensions.swift */; };
 		D72469AA2C0196E5003E522E /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469A22C0196E5003E522E /* InitialView.swift */; };
+		D72469AC2C019902003E522E /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72469AB2C019902003E522E /* AlbumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D72469842C019666003E522E /* CoverMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoverMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D72469872C019666003E522E /* CoverMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverMakerApp.swift; sourceTree = "<group>"; };
-		D72469892C019666003E522E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D724698B2C019667003E522E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D724698E2C019667003E522E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D72469902C019667003E522E /* CoverMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoverMaker.entitlements; sourceTree = "<group>"; };
@@ -34,6 +31,7 @@
 		D724699E2C0196E5003E522E /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		D724699F2C0196E5003E522E /* EnvironmentValues+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extensions.swift"; sourceTree = "<group>"; };
 		D72469A22C0196E5003E522E /* InitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		D72469AB2C019902003E522E /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +64,10 @@
 		D72469862C019666003E522E /* CoverMaker */ = {
 			isa = PBXGroup;
 			children = (
-				D724699D2C0196E5003E522E /* Domain */,
 				D72469982C0196E5003E522E /* Root */,
+				D724699D2C0196E5003E522E /* Domain */,
 				D72469A12C0196E5003E522E /* Utilities */,
 				D72469A32C0196E5003E522E /* Views */,
-				D72469872C019666003E522E /* CoverMakerApp.swift */,
-				D72469892C019666003E522E /* ContentView.swift */,
 				D724698B2C019667003E522E /* Assets.xcassets */,
 				D72469902C019667003E522E /* CoverMaker.entitlements */,
 				D724698D2C019667003E522E /* Preview Content */,
@@ -90,8 +86,8 @@
 		D72469982C0196E5003E522E /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				D72469962C0196E5003E522E /* CoverMakerApp.swift */,
 				D72469972C0196E5003E522E /* RootView.swift */,
+				D72469962C0196E5003E522E /* CoverMakerApp.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -142,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D72469A22C0196E5003E522E /* InitialView.swift */,
+				D72469AB2C019902003E522E /* AlbumView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,13 +215,12 @@
 			files = (
 				D72469A52C0196E5003E522E /* RootView.swift in Sources */,
 				D72469A92C0196E5003E522E /* EnvironmentValues+Extensions.swift in Sources */,
-				D724698A2C019666003E522E /* ContentView.swift in Sources */,
 				D72469A82C0196E5003E522E /* Collection+Extensions.swift in Sources */,
 				D72469A62C0196E5003E522E /* Service.swift in Sources */,
 				D72469A72C0196E5003E522E /* Store.swift in Sources */,
 				D72469AA2C0196E5003E522E /* InitialView.swift in Sources */,
+				D72469AC2C019902003E522E /* AlbumView.swift in Sources */,
 				D72469A42C0196E5003E522E /* CoverMakerApp.swift in Sources */,
-				D72469882C019666003E522E /* CoverMakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

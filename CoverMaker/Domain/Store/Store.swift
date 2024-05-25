@@ -13,4 +13,8 @@ class Store: ObservableObject {
     init(service: Service) {
         self.service = service
     }
+
+    func save() {
+        
+    }
 }

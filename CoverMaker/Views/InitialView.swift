@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct InitialView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject private var store: Store
+
+    @State private var title = ""
+    @State private var iconName = ""
+    @State private var bgColor: Color = .gray
 
     var body: some View {
-        Text("Hello, World!")
+        VStack(spacing: 30) {
+            Form {
+                TextField("Album Title", text: $title)
+                TextField("Icon name", text: $iconName)
+                ColorPicker("Background", selection: $bgColor)
+            }
+            .frame(maxWidth: 300)
+            AlbumCollection(
+                title: $title,
+                iconName: $iconName,
+                bgColor: $bgColor
+            )
+            Button("Save") {
+                store.save()
+            }
+//            .buttonStyle(.filled, .black)
+        }
+        .padding(30)
     }
 }
 

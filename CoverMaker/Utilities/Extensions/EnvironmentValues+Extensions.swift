@@ -7,13 +7,31 @@
 
 import SwiftUI
 
-private struct NewEnvironmentKey: EnvironmentKey {
+private struct TitleKey: EnvironmentKey {
     static let defaultValue: String = ""
 }
 
+private struct IconNameKey: EnvironmentKey {
+    static let defaultValue: String = ""
+}
+
+private struct BackgroundColorKey: EnvironmentKey {
+    static let defaultValue: Color = .gray
+}
+
 extension EnvironmentValues {
-    var newValue: String {
-        get { self[NewEnvironmentKey.self] }
-        set { self[NewEnvironmentKey.self] = newValue }
+    var title: String {
+        get { self[TitleKey.self] }
+        set { self[TitleKey.self] = newValue }
+    }
+
+    var iconName: String {
+        get { self[IconNameKey.self] }
+        set { self[IconNameKey.self] = newValue }
+    }
+
+    var bgColor: Color {
+        get { self[BackgroundColorKey.self] }
+        set { self[BackgroundColorKey.self] = newValue }
     }
 }
