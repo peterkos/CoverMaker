@@ -21,6 +21,7 @@ struct InitialView: View {
                 TextField("Icon name", text: $iconName)
                 ColorPicker("Background", selection: $bgColor)
             }
+            .font(Theme.fonts.body)
             .frame(maxWidth: 300)
             AlbumCollection(
                 title: $title,
@@ -30,7 +31,7 @@ struct InitialView: View {
             Button("Save") {
                 store.save()
             }
-//            .buttonStyle(.filled, .black)
+            .buttonStyle(.filled(color: .black))
         }
         .padding(30)
     }
